@@ -1,0 +1,11 @@
+apiVersion: skaffold/v1alpha2
+kind: Config
+build:
+  artifacts:
+  - imageName: dioracr.azurecr.io/hello-go
+    workspace: .
+deploy:
+  kubectl:
+    manifests:
+    - ./*
+    
